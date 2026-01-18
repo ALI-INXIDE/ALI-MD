@@ -1,5 +1,5 @@
 {
-  "name": "STARK-MD",
+  "name": "starkmd",
   "version": "8.0.0",
   "description": "NOT THE BEST BOT IN THE UNIVERSE, BUT ENJOYMENT IS PROMISING 💫",
   "main": "index.js",
@@ -42,6 +42,10 @@
     "canvas": "^3.0.1",
     "cheerio": "^1.0.0-rc.12",
     "cors": "^2.8.5",
+    "crypto": "latest",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "node-webpmux": "^3.1.8",
     "dotenv": "^16.4.5",
     "node-cache": "5.1.2",
     "express": "^4.19.2",
@@ -71,4 +75,4 @@
     "webcrack": "^2.14.1",
     "yt-search": "^2.11.0"
   }
- }
+}
