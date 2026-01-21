@@ -14,12 +14,11 @@ module.exports = {
     AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "false",
     STATUS_REPLY_MSG: process.env.STATUS_REPLY_MSG || "✅️ STATUS VIEWED BY STARK-MD", // Custom message
     MODE: process.env.MODE || "public", // Options: private, public, inbox, groups
+    TGTOKEN:process.env.TGTOKEN || "7672295852:AAG0SEMHbM1jhkpodxHspJuVT5tiAhXPPpI",
     OWNER_NUMBER: process.env.OWNER_NUMBER || "923199471258", // Only 1 owner number here, others add to sudo numbers
     OWNER_NAME: process.env.OWNER_NAME || "𓂃ᷱ᪳𝐀ɭīī 𝐈𝐍𝅦𝐗īī𝐃𝐄^᪲᪲᪲輪", // Custom name
     PACK_AUTHOR: process.env.PACK_AUTHOR || "", // Custom
     PACK_NAME: process.env.PACK_NAME || "",
-    HEROKU_API_KEY: process.env.HEROKU_API_KEY || "",
-    HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || "", // Custom
     PREFIX: process.env.PREFIX || ".",
     VERSION: process.env.VERSION || "7.0.0",
     ANTI_LINK: process.env.ANTI_LINK || "false", // true = kick, delete = delete, warn = warn
