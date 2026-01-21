@@ -1,6 +1,6 @@
 {
   "name": "STARK-MD",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "description": "STARK MD, a Simple WhatsApp Bot built with NodeJs to Enhance WhatsApp Communication experience",
   "website": "https://files.catbox.moe/ykdtkm.jpeg",
   "logo": "https://files.catbox.moe/w3k9sq.jpg",
@@ -34,16 +34,6 @@
       "value": "true",
       "required": false
     },
-    "HEROKU_APP_NAME": {
-      "description": "heroku app name, same as above entered",
-      "value": "",
-      "required": false
-    },
-    "HEROKU_API_KEY": {
-      "description": "Heroku account api key, https://dashboard.heroku.com/account",
-      "value": "",
-      "required": false
-    },
      "OWNER_NUMBER": {
       "description": "Bot owner number",
       "value": "923199471258",
@@ -51,7 +41,7 @@
     },
     "OWNER_NAME": {
       "description": "Owner display name",
-      "value": "𓂃ᷱ᪳𝐀ɭīī 𝐈𝐍𝅦𝐗īī𝐃𝐄^᪲᪲᪲輪",
+      "value": "THE ALI INXIDE",
       "required": true
     },
     "AUTO_STATUS_EMOJIS": {
@@ -81,7 +71,7 @@
     },
     "ANTI_LINK": {
       "description": "Anti-link action (false/delete/warn/true)",
-      "value": "true",
+      "value": "warn",
       "required": true
     },
     "ANTI_CALL": {
@@ -126,6 +116,11 @@
     },
     "WELCOME": {
       "description": "Enable welcome messages",
+      "value": "false",
+      "required": false
+    },
+    "GOODBYE": {
+      "description": "Enable goodbye messages",
       "value": "false",
       "required": false
     },
