@@ -31,6 +31,7 @@
     "@dark-yasiya/scrap": "1.0.1",
     "@dark-yasiya/yt-dl.js": "latest",
     "@whiskeysockets/baileys": "7.0.0-rc.9",
+    "@distube/ytdl-core": "latest",
     "@x-kira/database": "latest",
     "axios": "^1.7.9",
     "cheerio": "^1.0.0-rc.12",
