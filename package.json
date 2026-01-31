@@ -28,6 +28,8 @@
   "license": "MIT",
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@dark-yasiya/scrap": "1.0.1",
+    "@dark-yasiya/yt-dl.js": "latest",
     "@whiskeysockets/baileys": "7.0.0-rc.9",
     "@x-kira/database": "latest",
     "axios": "^1.7.9",
@@ -51,6 +53,7 @@
     "adm-zip": "^0.5.16",
     "pino": "^7.0.5",
     "pm2": "^6.0.14",
+    "puppeteer": "^23.3.2",
     "sharp": "^0.34.5",
     "translatte": "^3.0.1",
     "wa-sticker-formatter": "^4.4.4"
