@@ -1,6 +1,6 @@
 {
   "name": "STARK-MD",
-  "version": "8.0.0",
+  "version": "9.0.0",
   "description": "STARK MD, a Simple WhatsApp Bot built with NodeJs to Enhance WhatsApp Communication experience",
   "website": "https://files.catbox.moe/ykdtkm.jpeg",
   "logo": "https://files.catbox.moe/w3k9sq.jpg",
@@ -16,7 +16,7 @@
     },
     "SUDO_NUMBERS": {
       "description": "Add multiple numbers with country code without (+), separated by comma",
-      "value": "923199471258",
+      "value": "923437393822",
       "required": false
     },
     "ANTI_DELETE": {
@@ -46,7 +46,7 @@
     },
     "AUTO_STATUS_EMOJIS": {
       "description": "Custom emojis for auto status reactions",
-      "value": "❤️,💀,🌚,🌟,🔥,🌸,🍁,🍂,🦋,🍥,🍧,🍨,🍫,🍭,🎀,🎐,🎗️,👑,🚩,🇵🇰,🍓,🍇,🧃",
+      "value": "🦋,🍥,🍧,🍨,🍫,🍭,🎀,🎐,🎗️,👑,🇵🇰,🍓,🍇,🧃",
       "required": false
     },
     "AUTO_STATUS_REPLY": {
@@ -69,41 +69,16 @@
       "value": ".",
       "required": true
     },
-    "ANTI_LINK": {
-      "description": "Anti-link action (false/delete/warn/true)",
-      "value": "warn",
-      "required": true
-    },
     "ANTI_CALL": {
       "description": "Anti-call feature",
       "value": "false",
       "required": false
-    },
-    "ANTIBAD": {
-      "description": "Enter 'true' to automatically delete bad words sent by users in groups. You can set up this later using .antibad",
-      "required": false,
-      "value": "false"
-    },
-    "BAD_WORDS": {
-      "description": "Enter bad words separated by a comma(will be deleted if ANTIBAD is set to true)",
-      "required": false,
-      "value": "fuck, pussy, anus, idiot"
-    },
+    },    
     "ANTI_CALL_MSG": {
       "description": "Message when someone calls bot",
       "value": "*📞 ᴄαℓℓ ɴσт αℓℓσωє∂ 📵*",
       "required": false
-    },
-    "AUTO_REACT": {
-      "description": "Enable auto react",
-      "value": "false",
-      "required": false
-    },
-    "OWNER_REACT": {
-      "description": "Owner messages auto react",
-      "value": "false",
-      "required": false
-    },
+    }, 
     "BOT_NAME": {
       "description": "Bot name display",
       "value": "𓆩ု᪳𝐒𝐓𝐀𝐑𝐊-𝐌𝐃ှ᪳𓆪",
@@ -113,21 +88,6 @@
       "description": "put Bot menu picture URL",
       "value": "https://files.catbox.moe/w3k9sq.jpg",
       "required": true
-    },
-    "WELCOME": {
-      "description": "Enable welcome messages",
-      "value": "false",
-      "required": false
-    },
-    "GOODBYE": {
-      "description": "Enable goodbye messages",
-      "value": "false",
-      "required": false
-    },
-    "AUTO_BLOCK": {
-      "description": "Block country codes (comma separated)",
-      "value": "333,799",
-      "required": false
     },
     "PRESENCE": {
       "description": "Presence type (typing/recording/online/null)",
