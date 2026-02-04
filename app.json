@@ -100,15 +100,11 @@
       "required": true
     }
   },
-  "formation": {
-    "web": {
-      "quantity": 1,
-      "size": "basic"
-    }
-  },
+
   "buildpacks": [
     {
-      "url": "heroku/nodejs"
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
     }
-  ]
+  ],
+  "stack": "heroku-24"
 }
