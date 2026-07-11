@@ -1,48 +1,92 @@
 {
-  "name": "stark-md",
-  "version": "9.1.0",
-  "description": "NOT THE BEST BOT IN THE UNIVERSE, BUT ENJOYMENT IS PROMISING 💫",
+  "name": "ALI-MD",
+  "version": "10.0.0",
+  "description": "Advanced WhatsApp Multi-Device bot with AI features, media tools, automation, and dynamic plugins.",
   "main": "index.js",
+  "type": "commonjs",
+
   "scripts": {
-    "start": "node index.js",
     "dev": "node index.js",
-    "stop": "pm2 stop stark-md",
-    "restart": "pm2 restart stark-md"
+    "start": "pm2 start index.js --deep-monitoring --attach --name ali-md",
+    "stop": "pm2 stop ali-md",
+    "restart": "pm2 restart ali-md && pm2 logs",
+    "logs": "pm2 logs ali-md",
+    "monit": "pm2 monit",
+    "stash": "git stash && git stash drop"
   },
+
+  "keywords": [
+    "whatsapp",
+    "ali-md",
+    "whatsapp-bot",
+    "ai-bot",
+    "baileys",
+    "multi-device",
+    "automation",
+    "downloader"
+  ],
+
   "author": "ALI-INXIDE",
   "license": "MIT",
+
+  "engines": {
+    "node": ">=18.0.0 <=27.x"
+  },
+
   "dependencies": {
-    "@ffmpeg-installer/ffmpeg": "^1.1.0",
-    "@dark-yasiya/scrap": "1.0.1",
-    "@dark-yasiya/yt-dl.js": "latest",
-    "@whiskeysockets/baileys": "7.0.0-rc.9",
-    "@distube/ytdl-core": "latest",
-    "@x-kira/database": "latest",
-    "axios": "^1.7.9",
-    "cheerio": "^1.0.0-rc.12",
-    "dotenv": "^16.4.5",
-    "link-preview-js": "^3.0.4",
-    "express": "^4.19.2",
-    "file-type": "^19.4.0",
-    "fluent-ffmpeg": "^2.1.3",
-    "form-data": "^4.0.1",
-    "fs-extra": "^11.3.3",
-    "google-tts-api": "^2.0.2",
-    "megajs": "^1.3.3",
-    "mime-types": "^2.1.35",
+    "@ffmpeg-installer/ffmpeg": "*",
+    "@hapi/boom": "*",
+    "@vitalets/google-translate-api": "^9.2.0",
+    "@whiskeysockets/baileys": "^7.0.0-rc13",
     "yt-search": "^2.11.0",
-    "buffer": "^6.0.3",
-    "jimp": "latest",
-    "moment-timezone": "^0.5.45",
-    "node-cache": "5.1.2",
-    "node-fetch": "^3.3.2",
-    "node-webpmux": "^3.1.8",
+    "acrcloud": "*",
+    "adm-zip": "*",
+    "audio-decode": "^2.2.3",
+    "axios": "^1.2.5",
+    "cheerio": "^1.2.0",
+    "better-sqlite3": "^11.10.0",
+    "body-parser": "latest",
+    "buffer": "*",
+    "dotenv": "*",
+    "crypto": "latest",
+    "canvacord": "*",
+    "express": "^4.19.2",
+    "link-preview-js": "^3.0.4",
+    "ffmpeg-static": "*",
+    "file-type": "17.1.6",
+    "fluent-ffmpeg": "*",
+    "form-data": "^4.0.1",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.1.0",
     "gifted-btns": "^1.0.2",
-    "adm-zip": "^0.5.16",
+    "gifted-dls": "*",
+    "google-tts-api": "*",
+    "jimp": "*",
+    "mime-types": "^2.1.35",
+    "moment-timezone": "^0.5.45",
+    "node-cache": "^5.1.2",
+    "node-fetch": "^3.3.2",
+    "path": "latest",
+    "pg": "*",
     "pino": "^7.0.5",
-    "puppeteer": "^23.3.2",
-    "sharp": "^0.34.5",
-    "translatte": "^3.0.1",
-    "wa-sticker-formatter": "^4.4.4"
-  }
+    "pm2": "latest",
+    "qrcode-terminal": "^0.12.0",
+    "sequelize": "*",
+    "sharp": "0.32.6",
+    "sqlite3": "5.1.7",
+    "stream": "*",
+    "util": "*",
+    "wa-sticker-formatter": "*"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALI-INXIDE/ALI-MD.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/ALI-INXIDE/ALI-MD/issues"
+  },
+
+  "homepage": "https://github.com/ALI-INXIDE/ALI-MD#readme"
 }
