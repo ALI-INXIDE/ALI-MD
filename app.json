@@ -1,110 +1,183 @@
 {
-  "name": "STARK-MD",
-  "version": "9.0.0",
-  "description": "STARK MD, a Simple WhatsApp Bot built with NodeJs to Enhance WhatsApp Communication experience",
-  "website": "https://files.catbox.moe/ykdtkm.jpeg",
-  "logo": "https://files.catbox.moe/w3k9sq.jpg",
-  "keywords": ["STARK-MD", "Whatsapp bot", "Bot", "STARK-MD BOT"],
-  "repository": "https://github.com/ALI-INXIDE/STARK-MD",
+  "name": "ALI-MD",
+  "version": "10.0.0",
+  "description": "ALI-MD is a powerful Multi Device WhatsApp Bot designed to enhance automation, moderation, and user experience on WhatsApp.",
+  "logo": "https://files.catbox.moe/m8t72a.jpg",
+  "keywords": [
+    "ali-md",
+    "whatsapp-bot",
+    "multi-device",
+    "baileys",
+    "automation",
+    "bot"
+  ],
+
   "success_url": "/",
-  "stack": "container",
+
+  "stack": "heroku-24",
+
   "env": {
     "SESSION_ID": {
-      "description": "Put your Session STARK-MD~ID here",
-      "value": "",
-      "required": true
+      "description": "Your WhatsApp SESSION_ID. Generate it from the pairing website.",
+      "required": true,
+      "value": ""
     },
-    "SUDO_NUMBERS": {
-      "description": "Add multiple numbers with country code without (+), separated by comma",
-      "value": "923437393822",
-      "required": false
-    },
-    "ANTI_DELETE": {
-      "description": "Enable anti-delete (true/false)",
-      "value": "true",
-      "required": true
-    },
-    "AUTO_STATUS_VIEWS": {
-      "description": "Auto mark status as seen",
-      "value": "true",
-      "required": true
-    },
-    "AUTO_STATUS_REACTS": {
-      "description": "Auto react on status",
-      "value": "true",
-      "required": false
-    },
-     "OWNER_NUMBER": {
-      "description": "Bot owner number",
-      "value": "923437393822",
-      "required": true
-    },
-    "OWNER_NAME": {
-      "description": "Owner display name",
-      "value": "THE ALI INXIDE",
-      "required": true
-    },
-    "AUTO_STATUS_EMOJIS": {
-      "description": "Custom emojis for auto status reactions",
-      "value": "🦋,🍥,🍧,🍨,🍫,🍭,🎀,🎐,🎗️,👑,🇵🇰,🍓,🍇,🧃",
-      "required": false
-    },
-    "AUTO_STATUS_REPLY": {
-      "description": "Reply to viewed statuses",
-      "value": "false",
-      "required": false
-    },
-    "MODE": {
-      "description": "Bot mode: public, private, inbox, groups",
-      "value": "public",
-      "required": true
-    },
-    "PACK_NAME": {
-      "description": "Sticker pack name",
-      "value": "мα∂є ву ѕтαяк-м∂",
-      "required": false
-    },
+
     "PREFIX": {
-      "description": "Command prefix",
-      "value": ".",
-      "required": true
+      "description": "Bot command prefix.",
+      "required": false,
+      "value": "."
     },
-    "ANTI_CALL": {
-      "description": "Anti-call feature",
-      "value": "false",
-      "required": false
-    },    
-    "ANTI_CALL_MSG": {
-      "description": "Message when someone calls bot",
-      "value": "*📞 ᴄαℓℓ ɴσт αℓℓσωє∂ 📵*",
-      "required": false
-    }, 
+
+    "OWNER_NAME": {
+      "description": "Bot owner name.",
+      "required": false,
+      "value": "ᬊ͜͡𝐀ɭīī 𝐈𝐍𝅦𝐗īī𝐃𝐄 ꫂ⃟🇺🇸"
+    },
+
+    "OWNER_NUMBER": {
+      "description": "Owner WhatsApp number without + sign.",
+      "required": false,
+      "value": "923147725823"
+    },
+
     "BOT_NAME": {
-      "description": "Bot name display",
-      "value": "𓆩ု᪳𝐒𝐓𝐀𝐑𝐊-𝐌𝐃ှ᪳𓆪",
-      "required": true
+      "description": "Your bot display name.",
+      "required": false,
+      "value": "𓆩ု᪳𝐀ɭīī-𝐌𝐃ှ᪳𓆪"
     },
+
     "BOT_PIC": {
-      "description": "put Bot menu picture URL",
-      "value": "https://files.catbox.moe/w3k9sq.jpg",
-      "required": true
+      "description": "Bot menu profile image URL.",
+      "required": false,
+      "value": "https://files.catbox.moe/m8t72a.jpg"
     },
-    "PRESENCE": {
-      "description": "Presence type (typing/recording/online/null)",
-      "value": "null",
-      "required": false
+
+    "MODE": {
+      "description": "Use public - groups - private mode.",
+      "required": true,
+      "value": "public"
     },
+
     "TIME_ZONE": {
-      "description": "Your timezone",
-      "value": "Asia/Karachi",
-      "required": true
+      "description": "Timezone e.g Asia/Karachi.",
+      "required": false,
+      "value": "Asia/Karachi"
+    },
+
+    "PRESENCE": {
+      "description": "Set Presence status in online/typing/recording.",
+      "required": false,
+      "value": "offline"
+    },
+
+    "ANTIDELETE": {
+      "description": "Enable anti-delete mode.",
+      "required": false,
+      "value": "pm"
+    },
+
+    "ANTICALL": {
+      "description": "Auto reject calls true/false.",
+      "required": false,
+      "value": "false"
+    },
+
+    "ANTICALL_MSG": {
+      "description": "Message sent when rejecting calls.",
+      "required": false,
+      "value": "*_📞 Auto Call Reject Mode Active. 📵 No Calls Allowed!_*"
+    },
+
+    "AUTO_LIKE_STATUS": {
+      "description": "Auto-like WhatsApp statuses.",
+      "required": false,
+      "value": "true"
+    },
+
+    "AUTO_READ_STATUS": {
+      "description": "Auto-view WhatsApp statuses.",
+      "required": false,
+      "value": "true"
+    },
+
+    "STATUS_LIKE_EMOJIS": {
+      "description": "Status reaction emojis separated by commas.",
+      "required": false,
+      "value": "💛,❤️,💜,🤍,💙"
+    },
+
+    "AUTO_REPLY_STATUS": {
+      "description": "Auto reply to statuses.",
+      "required": false,
+      "value": "false"
+    },
+
+    "STATUS_REPLY_TEXT": {
+      "description": "Reply text for viewed statuses.",
+      "required": false,
+      "value": "*status viewed successfully ✅*"
+    },
+
+    "AUTO_READ_MESSAGES": {
+      "description": "Auto read messages groups/dm.",
+      "required": false,
+      "value": "off"
+    },
+
+    "AUTO_BIO": {
+      "description": "Enable auto bio update.",
+      "required": false,
+      "value": "false"
+    },
+
+    "AUTO_BLOCK": {
+      "description": "Numbers to auto block.",
+      "required": false,
+      "value": ""
+    },
+
+    "PACK_NAME": {
+      "description": "Sticker pack name.",
+      "required": false,
+      "value": "мα∂є ву αℓι-м∂,🕷️"
+    },
+
+    "SUDO_NUMBERS": {
+      "description": "Sudo numbers separated by commas.",
+      "required": false,
+      "value": ""
+    },
+
+    "DATABASE_URL": {
+      "description": "Optional PostgreSQL connection URL. Leave blank to use SQLite.",
+      "required": false,
+      "value": ""
     }
   },
 
-  "buildpacks": [
+  "addons": [
     {
-      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+      "plan": "heroku-postgresql:essential-0",
+      "as": "DATABASE"
     }
   ],
-  "stack": "heroku-24"
+
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }
+  ],
+
+  "environments": {
+    "test": {
+      "addons": [],
+      "env": {
+        "DATABASE_URL": ""
+      }
+    }
+  }
 }
