@@ -1,50 +1,73 @@
-const fs = require('fs'),
-      dotenv = fs.existsSync('config.env') ? require('dotenv').config({ path: '/.env' }) : undefined,
-      convertToBool = (text, fault = 'true') => text === fault;
+const fs = require("fs-extra");
 
-global.session = "https://stark-pair.vercel.app";
+if (fs.existsSync(".env")) {
+    require("dotenv").config({
+        path: __dirname + "/.env",
+        quiet: true,
+    });
+}
 
 module.exports = {
-    SESSION_ID: process.env.SESSION_ID || "STARK-MD==", // Add sess Id here especially when deploying on panels else use app.json and .env file...
-    SUDO_NUMBERS: process.env.SUDO_NUMBERS || "", // Add multiple numbers with country codes without (+), separated by comma
-    ANTI_DELETE: process.env.ANTI_DELETE || "true", // ✅ only ONE, default = true
-    AUTO_STATUS_VIEWS: process.env.AUTO_STATUS_VIEWS || "true",
-    AUTO_STATUS_REACTS: process.env.AUTO_STATUS_REACTS || "true",
-    AUTO_STATUS_EMOJIS: process.env.AUTO_STATUS_EMOJIS || "❤️,💀,🌚,🌟,🔥,❤️‍🩹,🌸,🍁,🍂,🦋,🍥,🍧,🍨,🍫,🍭,🎀,🎐,🎗️,👑,🚩,🇵🇰,🍓,🍇,🧃,🗿,🎋,💸,🧸,🦢,✨,🌾,🌊,⚡,🌏,🕸️,🎀,🪄,🌝,🌜,💫,🤍,🖤,🤎,💜,💙", // Input your custom emojis
-    AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "false",
-    STATUS_REPLY_MSG: process.env.STATUS_REPLY_MSG || "✅️ STATUS VIEWED BY STARK-MD", // Custom message
-    MODE: process.env.MODE || "public", // Options: private, public, inbox, groups
+    PREFIX: process.env.PREFIX,
+
+    OWNER_NAME: process.env.OWNER_NAME,
+    OWNER_NUMBER: process.env.OWNER_NUMBER,
+    BOT_NAME: process.env.BOT_NAME,
+    FOOTER: process.env.FOOTER,
+    CAPTION: process.env.CAPTION,
+    BOT_PIC: process.env.BOT_PIC,
+    MODE: process.env.MODE,
     TGTOKEN:process.env.TGTOKEN || "7672295852:AAG0SEMHbM1jhkpodxHspJuVT5tiAhXPPpI",
-    OWNER_NUMBER: process.env.OWNER_NUMBER || "923437393822", // Only 1 owner number here, others add to sudo numbers
-    OWNER_NAME: process.env.OWNER_NAME || "𓂃ᷱ᪳𝐀ɭīī 𝐈𝐍𝅦𝐗īī𝐃𝐄^᪲᪲᪲輪", // Custom name
-    PACK_AUTHOR: process.env.PACK_AUTHOR || "", // Custom
-    PACK_NAME: process.env.PACK_NAME || "",
-    PREFIX: process.env.PREFIX || ".",
-    VERSION: process.env.VERSION || "9.0.0",
-    ANTI_LINK: process.env.ANTI_LINK || "false", // true = kick, delete = delete, warn = warn
-    ANTI_CALL: process.env.ANTI_CALL || "false",
-    ANTIBAD: process.env.ANTIBAD || "false",
-    BAD_WORDS: process.env.BAD_WORDS || "fuck, pussy, anus, idiot", // Will be deleted if ANTIBAD is true
-    ANTI_CALL_MSG: process.env.ANTI_CALL_MSG || "*📞 ᴄαℓℓ ɴσт αℓℓσωє∂ ιɴ тнιѕ ɴᴜмвєʀ уσυ ∂σɴт нανє ᴘєʀмιѕѕισɴ 📵*",
-    AUTO_REACT: process.env.AUTO_REACT || "false",
-    OWNER_REACT: process.env.OWNER_REACT || "false",
-    BOT_NAME: process.env.BOT_NAME || "𓆩ု᪳𝐒𝐓𝐀𝐑𝐊-𝐌𝐃ှ᪳𓆪", // Don't change
-    BOT_PIC: process.env.BOT_PIC || "https://files.catbox.moe/2ka956.jpg", // Don't change
-    AUTO_AUDIO: process.env.AUTO_AUDIO || "false",
-    AUTO_BIO: process.env.AUTO_BIO || "false",
-    AUTO_BIO_QUOTE: process.env.AUTO_BIO_QUOTE || "STARK MD ALIVE",
-    WELCOME: process.env.WELCOME || "false",
-    AUTO_READ_MESSAGES: process.env.AUTO_READ_MESSAGES || "false", // true = bluetick all messages, commands = bluetick commands only
-    AUTO_BLOCK: process.env.AUTO_BLOCK || "333,799", // Multiple country codes separated by comma
-    PRESENCE: process.env.PRESENCE || "null", // typing, recording, online, null
-    TIME_ZONE: process.env.TIME_ZONE || "Asia/Karachi", // Enter your timezone
+    SESSION_ID: process.env.SESSION_ID,
+    VERSION: process.env.VERSION,
+    WARN_COUNT: process.env.WARN_COUNT,
+    TIME_ZONE: process.env.TIME_ZONE,
+    DM_PRESENCE: process.env.DM_PRESENCE,
+    GC_PRESENCE: process.env.GC_PRESENCE,
+    CHATBOT: process.env.CHATBOT,
+    CHATBOT_MODE: process.env.CHATBOT_MODE,
+    STARTING_MESSAGE: process.env.STARTING_MESSAGE,
+
+    ANTIDELETE: process.env.ANTIDELETE,
+    ANTI_EDIT: process.env.ANTI_EDIT,
+    ANTIVIEWONCE: process.env.ANTIVIEWONCE,
+    ANTICALL: process.env.ANTICALL,
+    ANTICALL_MSG: process.env.ANTICALL_MSG,
+    
+    AUTO_LIKE_STATUS: process.env.AUTO_LIKE_STATUS,
+    AUTO_READ_STATUS: process.env.AUTO_READ_STATUS,
+    STATUS_LIKE_EMOJIS: process.env.STATUS_LIKE_EMOJIS,
+    AUTO_REPLY_STATUS: process.env.AUTO_REPLY_STATUS,
+    STATUS_REPLY_TEXT: process.env.STATUS_REPLY_TEXT,
+    AUTO_REACT: process.env.AUTO_REACT,
+    AUTO_REPLY: process.env.AUTO_REPLY,
+    AUTO_READ_MESSAGES: process.env.AUTO_READ_MESSAGES,
+    AUTO_BIO: process.env.AUTO_BIO,
+    AUTO_BLOCK: process.env.AUTO_BLOCK,
+    
+    YT: process.env.YT,
+    NEWSLETTER_JID: process.env.NEWSLETTER_JID,
+    GC_JID: process.env.GC_JID,
+    NEWSLETTER_URL: process.env.NEWSLETTER_URL,
+    BOT_REPO: process.env.BOT_REPO,
+    PACK_NAME: process.env.PACK_NAME,
+    PACK_AUTHOR: process.env.PACK_AUTHOR,
+    SUDO_NUMBERS: process.env.SUDO_NUMBERS,
+    PM_PERMIT: process.env.PM_PERMIT,
+    DATABASE_URL: process.env.DATABASE_URL,
+    // Postgres URL
+    // Free: neon.tech / supabase / render / heroku
+    // fallback => ./ali-md/database/database.db
 };
 
-// Auto-reload this config when file changes
-let file = require.resolve(__filename);
-fs.watchFile(file, () => {
-    fs.unwatchFile(file);
-    console.log(`Update '${__filename}'`);
-    delete require.cache[file];
-    require(file);
+let fileName = require.resolve(__filename);
+
+fs.watchFile(fileName, () => {
+    fs.unwatchFile(fileName);
+
+    console.log(`Updated File: ${__filename}`);
+
+    delete require.cache[fileName];
+
+    require(fileName);
 });
