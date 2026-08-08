@@ -1,19 +1,28 @@
 {
   "name": "ALI-MD",
   "version": "10.0.0",
-  "description": "ALI-MD is a powerful Multi Device WhatsApp Bot designed to enhance automation, moderation, and user experience on WhatsApp.",
+  "description": "ALI-MD — A powerful Multi-Device WhatsApp Bot for automation, AI, moderation, media tools, and advanced group management.",
   "logo": "https://files.catbox.moe/m8t72a.jpg",
   "keywords": [
     "ali-md",
+    "ali-md-bot",
     "whatsapp-bot",
-    "multi-device",
+    "whatsapp-multi-device",
+    "multi-device-bot",
     "baileys",
+    "whatsapp-automation",
+    "group-management",
+    "media-downloader",
+    "ai-whatsapp-bot",
+    "whatsapp-ai",
     "automation",
-    "bot"
+    "nodejs",
+    "javascript",
+    "heroku",
+    "whatsapp-tools"
   ],
 
   "success_url": "/",
-
   "stack": "heroku-24",
 
   "env": {
@@ -42,61 +51,55 @@
     },
 
     "BOT_NAME": {
-      "description": "Your bot display name.",
+      "description": "Bot display name.",
       "required": false,
-      "value": "𓆩ု᪳𝐀ɭīī-𝐌𝐃ှ᪳𓆪"
+      "value": "𝐀ɭīī-𝐌𝐃"
     },
 
     "BOT_PIC": {
       "description": "Bot menu profile image URL.",
       "required": false,
-      "value": "https://files.catbox.moe/m8t72a.jpg"
+      "value": "https://files.catbox.moe/rbxazy.jpg"
     },
 
     "MODE": {
-      "description": "Use public - groups - private mode.",
+      "description": "Bot mode: public, groups, or private.",
       "required": true,
       "value": "public"
     },
 
     "TIME_ZONE": {
-      "description": "Timezone e.g Asia/Karachi.",
+      "description": "Timezone, for example Asia/Karachi.",
       "required": false,
       "value": "Asia/Karachi"
     },
 
     "PRESENCE": {
-      "description": "Set Presence status in online/typing/recording.",
+      "description": "Default WhatsApp presence status.",
       "required": false,
       "value": "offline"
     },
 
-    "ANTIDELETE": {
-      "description": "Enable anti-delete mode.",
-      "required": false,
-      "value": "pm"
-    },
-
     "ANTICALL": {
-      "description": "Auto reject calls true/false.",
+      "description": "Automatically reject incoming calls.",
       "required": false,
       "value": "false"
     },
 
     "ANTICALL_MSG": {
-      "description": "Message sent when rejecting calls.",
+      "description": "Message sent when an incoming call is rejected.",
       "required": false,
       "value": "*_📞 Auto Call Reject Mode Active. 📵 No Calls Allowed!_*"
     },
 
     "AUTO_LIKE_STATUS": {
-      "description": "Auto-like WhatsApp statuses.",
+      "description": "Automatically like WhatsApp statuses.",
       "required": false,
       "value": "true"
     },
 
     "AUTO_READ_STATUS": {
-      "description": "Auto-view WhatsApp statuses.",
+      "description": "Automatically view WhatsApp statuses.",
       "required": false,
       "value": "true"
     },
@@ -108,39 +111,39 @@
     },
 
     "AUTO_REPLY_STATUS": {
-      "description": "Auto reply to statuses.",
+      "description": "Automatically reply to WhatsApp statuses.",
       "required": false,
       "value": "false"
     },
 
     "STATUS_REPLY_TEXT": {
-      "description": "Reply text for viewed statuses.",
+      "description": "Reply text for status views.",
       "required": false,
-      "value": "*status viewed successfully ✅*"
+      "value": "*Status viewed successfully ✅*"
     },
 
     "AUTO_READ_MESSAGES": {
-      "description": "Auto read messages groups/dm.",
+      "description": "Automatically read messages in groups and private chats.",
       "required": false,
       "value": "off"
     },
 
     "AUTO_BIO": {
-      "description": "Enable auto bio update.",
+      "description": "Enable automatic bio updates.",
       "required": false,
       "value": "false"
     },
 
     "AUTO_BLOCK": {
-      "description": "Numbers to auto block.",
+      "description": "Numbers to automatically block.",
       "required": false,
       "value": ""
     },
 
     "PACK_NAME": {
-      "description": "Sticker pack name.",
+      "description": "Default sticker pack name.",
       "required": false,
-      "value": "мα∂є ву αℓι-м∂,🕷️"
+      "value": "мα∂є ву αℓι-м∂"
     },
 
     "SUDO_NUMBERS": {
@@ -150,7 +153,7 @@
     },
 
     "DATABASE_URL": {
-      "description": "Optional PostgreSQL connection URL. Leave blank to use SQLite.",
+      "description": "PostgreSQL connection URL. Leave blank to use SQLite when no Heroku database addon is attached.",
       "required": false,
       "value": ""
     }
@@ -166,9 +169,6 @@
   "buildpacks": [
     {
       "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
     }
   ],
 
