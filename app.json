@@ -1,183 +1,146 @@
 {
   "name": "ALI-MD",
-  "version": "10.0.0",
   "description": "ALI-MD — A powerful Multi-Device WhatsApp Bot for automation, AI, moderation, media tools, and advanced group management.",
-  "logo": "https://files.catbox.moe/m8t72a.jpg",
+  "repository": "https://github.com/ALI-INXIDE/ALI-MD",
+  "logo": "https://files.catbox.moe/rbxazy.jpg",
   "keywords": [
     "ali-md",
-    "ali-md-bot",
     "whatsapp-bot",
-    "whatsapp-multi-device",
-    "multi-device-bot",
+    "multi-device",
     "baileys",
-    "whatsapp-automation",
-    "group-management",
-    "media-downloader",
-    "ai-whatsapp-bot",
-    "whatsapp-ai",
-    "automation",
-    "nodejs",
-    "javascript",
-    "heroku",
-    "whatsapp-tools"
+    "automation"
   ],
-
   "success_url": "/",
-  "stack": "heroku-24",
-
+  "stack": "container",
   "env": {
     "SESSION_ID": {
-      "description": "Your WhatsApp SESSION_ID. Generate it from the pairing website.",
+      "description": "Your WhatsApp SESSION_ID. Generate from pairing website.",
       "required": true,
       "value": ""
     },
-
     "PREFIX": {
       "description": "Bot command prefix.",
       "required": false,
       "value": "."
     },
-
     "OWNER_NAME": {
       "description": "Bot owner name.",
       "required": false,
       "value": "ᬊ͜͡𝐀ɭīī 𝐈𝐍𝅦𝐗īī𝐃𝐄 ꫂ⃟🇺🇸"
     },
-
     "OWNER_NUMBER": {
       "description": "Owner WhatsApp number without + sign.",
       "required": false,
       "value": "923147725823"
     },
-
     "BOT_NAME": {
       "description": "Bot display name.",
       "required": false,
       "value": "𝐀ɭīī-𝐌𝐃"
     },
-
     "BOT_PIC": {
       "description": "Bot menu profile image URL.",
       "required": false,
       "value": "https://files.catbox.moe/rbxazy.jpg"
     },
-
     "MODE": {
       "description": "Bot mode: public, groups, or private.",
       "required": true,
       "value": "public"
     },
-
     "TIME_ZONE": {
       "description": "Timezone, for example Asia/Karachi.",
       "required": false,
       "value": "Asia/Karachi"
     },
-
     "PRESENCE": {
       "description": "Default WhatsApp presence status.",
       "required": false,
-      "value": "offline"
+      "value": "online"
     },
-
     "ANTICALL": {
       "description": "Automatically reject incoming calls.",
       "required": false,
-      "value": "false"
+      "value": "true"
     },
-
     "ANTICALL_MSG": {
       "description": "Message sent when an incoming call is rejected.",
       "required": false,
       "value": "*_📞 Auto Call Reject Mode Active. 📵 No Calls Allowed!_*"
     },
-
     "AUTO_LIKE_STATUS": {
       "description": "Automatically like WhatsApp statuses.",
       "required": false,
       "value": "true"
     },
-
     "AUTO_READ_STATUS": {
       "description": "Automatically view WhatsApp statuses.",
       "required": false,
       "value": "true"
     },
-
     "STATUS_LIKE_EMOJIS": {
       "description": "Status reaction emojis separated by commas.",
       "required": false,
       "value": "💛,❤️,💜,🤍,💙"
     },
-
     "AUTO_REPLY_STATUS": {
       "description": "Automatically reply to WhatsApp statuses.",
       "required": false,
       "value": "false"
     },
-
     "STATUS_REPLY_TEXT": {
       "description": "Reply text for status views.",
       "required": false,
       "value": "*Status viewed successfully ✅*"
     },
-
     "AUTO_READ_MESSAGES": {
       "description": "Automatically read messages in groups and private chats.",
       "required": false,
-      "value": "off"
+      "value": "on"
     },
-
     "AUTO_BIO": {
       "description": "Enable automatic bio updates.",
       "required": false,
       "value": "false"
     },
-
     "AUTO_BLOCK": {
       "description": "Numbers to automatically block.",
       "required": false,
       "value": ""
     },
-
     "PACK_NAME": {
       "description": "Default sticker pack name.",
       "required": false,
       "value": "мα∂є ву αℓι-м∂"
     },
-
     "SUDO_NUMBERS": {
       "description": "Sudo numbers separated by commas.",
       "required": false,
       "value": ""
     },
-
     "DATABASE_URL": {
-      "description": "PostgreSQL connection URL. Leave blank to use SQLite when no Heroku database addon is attached.",
+      "description": "PostgreSQL connection URL. Leave blank to use SQLite.",
       "required": false,
       "value": ""
     }
   },
-
   "addons": [
     {
-      "plan": "heroku-postgresql:essential-0",
-      "as": "DATABASE"
+      "plan": "heroku-postgresql:essential-0"
     }
   ],
-
   "buildpacks": [
     {
-      "url": "heroku/nodejs"
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
     }
   ],
-
-  "environments": {
-    "test": {
-      "addons": [],
-      "env": {
-        "DATABASE_URL": ""
-      }
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
     }
   }
 }
