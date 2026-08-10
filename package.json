@@ -1,83 +1,66 @@
 {
   "name": "ALI-MD",
   "version": "10.0.0",
-  "description": "Advanced WhatsApp Multi-Device bot with AI features, media tools, automation, and dynamic plugins.",
+  "description": "ALI-MD — A powerful Multi-Device WhatsApp Bot for automation, AI, moderation, media tools, and advanced group management.",
   "main": "index.js",
   "type": "commonjs",
 
   "scripts": {
+    "start": "node index.js",
     "dev": "node index.js",
-    "start": "pm2 start index.js --deep-monitoring --attach --name ali-md",
+
+    "start:pm2": "pm2 start index.js --name ali-md",
     "stop": "pm2 stop ali-md",
-    "restart": "pm2 restart ali-md && pm2 logs",
+    "restart": "pm2 restart ali-md",
     "logs": "pm2 logs ali-md",
-    "monit": "pm2 monit",
-    "stash": "git stash && git stash drop"
+    "status": "pm2 status"
   },
 
-  "keywords": [
-    "whatsapp",
-    "ali-md",
-    "whatsapp-bot",
-    "ai-bot",
-    "baileys",
-    "multi-device",
-    "automation",
-    "downloader"
-  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
 
   "author": "ALI-INXIDE",
   "license": "MIT",
 
-  "engines": {
-    "node": ">=18.0.0 <=27.x"
-  },
-
   "dependencies": {
-    "@ffmpeg-installer/ffmpeg": "*",
-    "@hapi/boom": "*",
+    "@ffmpeg-installer/ffmpeg": "1.1.0",
+    "@hapi/boom": "10.0.1",
     "@vitalets/google-translate-api": "^9.2.0",
     "@whiskeysockets/baileys": "^7.0.0-rc13",
     "yt-search": "^2.11.0",
-    "acrcloud": "*",
-    "adm-zip": "*",
-    "jszip": "^3.10.1",
+    "acrcloud": "1.4.0",
+    "adm-zip": "0.6.0",
     "audio-decode": "^2.2.3",
     "axios": "^1.2.5",
     "cheerio": "^1.2.0",
-    "better-sqlite3": "^11.10.0",
-    "body-parser": "latest",
-    "buffer": "*",
-    "dotenv": "*",
-    "crypto": "latest",
-    "canvacord": "*",
+    "body-parser": "^2.3.0",
+    "dotenv": "17.4.2",
+    "canvacord": "6.0.4",
     "express": "^4.19.2",
     "link-preview-js": "^3.0.4",
-    "ffmpeg-static": "*",
-    "file-type": "17.1.6",
-    "fluent-ffmpeg": "*",
+    "ffmpeg-static": "5.3.0",
+    "file-type": "16.5.4",
+    "fluent-ffmpeg": "2.1.3",
     "form-data": "^4.0.1",
-    "fs": "^0.0.1-security",
     "fs-extra": "^11.1.0",
     "gifted-btns": "^1.0.2",
-    "gifted-dls": "*",
-    "google-tts-api": "*",
-    "jimp": "*",
+    "gifted-dls": "1.3.5",
+    "google-tts-api": "2.0.2",
+    "jimp": "1.6.1",
     "mime-types": "^2.1.35",
     "moment-timezone": "^0.5.45",
     "node-cache": "^5.1.2",
     "node-fetch": "^3.3.2",
-    "path": "latest",
-    "pg": "*",
+    "pg": "8.22.0",
     "pino": "^7.0.5",
-    "pm2": "latest",
+    "pm2": "7.0.3",
     "qrcode-terminal": "^0.12.0",
-    "sequelize": "*",
-    "sharp": "0.32.6",
+    "sequelize": "6.37.8",
+    "sharp": "0.35.3",
     "sqlite3": "5.1.7",
-    "stream": "*",
-    "util": "*",
-    "wa-sticker-formatter": "*"
+    "better-sqlite3": "11.10.0",
+    "wa-sticker-formatter": "4.4.4"
   },
 
   "repository": {
