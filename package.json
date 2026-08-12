@@ -4,25 +4,20 @@
   "description": "ALI-MD — A powerful Multi-Device WhatsApp Bot for automation, AI, moderation, media tools, and advanced group management.",
   "main": "index.js",
   "type": "commonjs",
-
   "scripts": {
     "start": "node index.js",
     "dev": "node index.js",
-
     "start:pm2": "pm2 start index.js --name ali-md",
     "stop": "pm2 stop ali-md",
     "restart": "pm2 restart ali-md",
     "logs": "pm2 logs ali-md",
     "status": "pm2 status"
   },
-
   "engines": {
     "node": ">=18.0.0"
   },
-
   "author": "ALI-INXIDE",
   "license": "MIT",
-
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "1.1.0",
     "@hapi/boom": "10.0.1",
@@ -58,20 +53,16 @@
     "pm2": "7.0.3",
     "qrcode-terminal": "^0.12.0",
     "sequelize": "6.37.8",
-    "sqlite3": "^6.0.1",
     "sharp": "0.35.3",
-    "better-sqlite3": "11.10.0",
+    "better-sqlite3": "9.4.3",
     "wa-sticker-formatter": "4.4.4"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ALI-INXIDE/ALI-MD.git"
   },
-
   "bugs": {
     "url": "https://github.com/ALI-INXIDE/ALI-MD/issues"
   },
-
   "homepage": "https://github.com/ALI-INXIDE/ALI-MD#readme"
 }
