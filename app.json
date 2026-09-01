@@ -1,0 +1,184 @@
+{
+  "name": "ALI-MD",
+  "version": "10.0.0",
+  "description": "ALI-MD is a powerful Multi Device WhatsApp Bot designed to enhance automation, moderation, and user experience on WhatsApp.",
+  "logo": "https://files.catbox.moe/m8t72a.jpg",
+  "keywords": [
+    "ali-md",
+    "whatsapp-bot",
+    "multi-device",
+    "baileys",
+    "automation",
+    "bot"
+  ],
+
+  "success_url": "/",
+
+  "stack": "heroku-22",
+
+  "env": {
+    "SESSION_ID": {
+      "description": "Your WhatsApp SESSION_ID. Generate it from the pairing website.",
+      "required": true,
+      "value": ""
+    },
+
+    "PREFIX": {
+      "description": "Bot command prefix.",
+      "required": false,
+      "value": "."
+    },
+
+    "OWNER_NAME": {
+      "description": "Bot owner name.",
+      "required": false,
+      "value": "ᬊ͜͡𝐀ɭīī 𝐈𝐍𝅦𝐗īī𝐃𝐄 ꫂ⃟🇺🇸"
+    },
+
+    "OWNER_NUMBER": {
+      "description": "Owner WhatsApp number without + sign.",
+      "required": false,
+      "value": "923147725823"
+    },
+
+    "BOT_NAME": {
+      "description": "Bot display name.",
+      "required": false,
+      "value": "𝐀ɭīī-𝐌𝐃"
+    },
+
+    "BOT_PIC": {
+      "description": "Bot menu profile image URL.",
+      "required": false,
+      "value": "https://files.catbox.moe/rbxazy.jpg"
+    },
+
+    "MODE": {
+      "description": "Bot mode: public, groups, or private.",
+      "required": true,
+      "value": "public"
+    },
+
+    "TIME_ZONE": {
+      "description": "Timezone, for example Asia/Karachi.",
+      "required": false,
+      "value": "Asia/Karachi"
+    },
+
+    "PRESENCE": {
+      "description": "Default WhatsApp presence status.",
+      "required": false,
+      "value": "offline"
+    },
+
+    "ANTICALL": {
+      "description": "Automatically reject incoming calls.",
+      "required": false,
+      "value": "false"
+    },
+
+    "ANTICALL_MSG": {
+      "description": "Message sent when an incoming call is rejected.",
+      "required": false,
+      "value": "*_📞 Auto Call Reject Mode Active. 📵 No Calls Allowed!_*"
+    },
+
+    "AUTO_LIKE_STATUS": {
+      "description": "Automatically like WhatsApp statuses.",
+      "required": false,
+      "value": "true"
+    },
+
+    "AUTO_READ_STATUS": {
+      "description": "Automatically view WhatsApp statuses.",
+      "required": false,
+      "value": "true"
+    },
+
+    "STATUS_LIKE_EMOJIS": {
+      "description": "Status reaction emojis separated by commas.",
+      "required": false,
+      "value": "💛,❤️,💜,🤍,💙"
+    },
+
+    "AUTO_REPLY_STATUS": {
+      "description": "Automatically reply to WhatsApp statuses.",
+      "required": false,
+      "value": "false"
+    },
+
+    "STATUS_REPLY_TEXT": {
+      "description": "Reply text for status views.",
+      "required": false,
+      "value": "*Status viewed successfully ✅*"
+    },
+
+    "AUTO_READ_MESSAGES": {
+      "description": "Automatically read messages in groups and private chats.",
+      "required": false,
+      "value": "off"
+    },
+
+    "AUTO_BIO": {
+      "description": "Enable automatic bio updates.",
+      "required": false,
+      "value": "false"
+    },
+
+    "AUTO_BLOCK": {
+      "description": "Numbers to automatically block.",
+      "required": false,
+      "value": ""
+    },
+
+    "PACK_NAME": {
+      "description": "Default sticker pack name.",
+      "required": false,
+      "value": "мα∂є ву αℓι-м∂"
+    },
+
+    "SUDO_NUMBERS": {
+      "description": "Sudo numbers separated by commas.",
+      "required": false,
+      "value": ""
+    },
+
+    "DATABASE_URL": {
+      "description": "PostgreSQL connection URL. Leave blank to use SQLite when no Heroku database addon is attached.",
+      "required": false,
+      "value": ""
+    }
+  },
+  
+  "addons": [
+    {
+      "plan": "heroku-postgresql:essential-0",
+      "as": "DATABASE"
+    }
+  ],
+
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }
+  ],
+
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+
+  "environments": {
+    "test": {
+      "addons": [],
+      "env": {
+        "DATABASE_URL": ""
+      }
+    }
+  }
+}
