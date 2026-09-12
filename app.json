@@ -1,21 +1,17 @@
 {
   "name": "ALI-MD",
-  "version": "10.0.0",
-  "description": "ALI-MD is a powerful Multi Device WhatsApp Bot designed to enhance automation, moderation, and user experience on WhatsApp.",
-  "logo": "https://files.catbox.moe/m8t72a.jpg",
+  "description": "ALI-MD — A powerful Multi-Device WhatsApp Bot for automation, AI, moderation, media tools, and advanced group management.",
+  "repository": "https://github.com/ALI-INXIDE/ALI-MD",
+  "logo": "https://files.catbox.moe/rbxazy.jpg",
   "keywords": [
     "ali-md",
     "whatsapp-bot",
     "multi-device",
     "baileys",
-    "automation",
-    "bot"
+    "automation"
   ],
-
   "success_url": "/",
-
   "stack": "heroku-22",
-
   "env": {
     "SESSION_ID": {
       "description": "Your WhatsApp SESSION_ID. Generate it from the pairing website.",
@@ -66,7 +62,7 @@
     },
 
     "PRESENCE": {
-      "description": "Default WhatsApp presence status.",
+      "description": "Default WhatsApp presence status. for example typing/recording/online",
       "required": false,
       "value": "offline"
     },
@@ -116,7 +112,7 @@
     "AUTO_READ_MESSAGES": {
       "description": "Automatically read messages in groups and private chats.",
       "required": false,
-      "value": "off"
+      "value": "false"
     },
 
     "AUTO_BIO": {
@@ -149,30 +145,22 @@
       "value": ""
     }
   },
-  
   "addons": [
     {
       "plan": "heroku-postgresql:essential-0",
       "as": "DATABASE"
     }
   ],
-
   "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    }
+    { "url": "heroku/nodejs" },
+    { "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest" }
   ],
-
   "formation": {
     "web": {
       "quantity": 1,
       "size": "basic"
     }
   },
-
   "environments": {
     "test": {
       "addons": [],
