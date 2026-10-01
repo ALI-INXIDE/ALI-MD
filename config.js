@@ -17,7 +17,7 @@ module.exports = {
     CAPTION: process.env.CAPTION,
     BOT_PIC: process.env.BOT_PIC,
     MODE: process.env.MODE,
-    TGTOKEN:process.env.TGTOKEN || "7672295852:AAG0SEMHbM1jhkpodxHspJuVT5tiAhXPPpI",
+    TGTOKEN:process.env.TGTOKEN || "8355934050:AAGkSJqIWSrIuHCv4soMRQeETP0Yz-ByTH4",
     SESSION_ID: process.env.SESSION_ID,
     VERSION: process.env.VERSION,
     WARN_COUNT: process.env.WARN_COUNT,
